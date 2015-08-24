@@ -4,6 +4,7 @@ class InquiriesController < ApplicationController
   end
 
   def create
-    render text: "Thank you"
+    flash.notice = "Thank you for sending us a message."
+    redirect_to root_url
   end
 end

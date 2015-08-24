@@ -26,6 +26,10 @@ body {
   margin-top: 50px;
 }
 
+.messages {
+  margin-top: 20px;
+}
+
 .navbar-fixed-top .this-page {
   background-color: rgb(231,231,231);
   color: rgb(85,85,85);

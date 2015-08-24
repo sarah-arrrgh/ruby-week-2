@@ -33,7 +33,7 @@
             <li><%= link_to_unless_current "About", about_path do
               content_tag(:span, "About", class: "this-page")
             end %></li>
-            <li><%= link_to_unless_current "Contact", about_path do
+            <li><%= link_to_unless_current "Contact", contact_path do
               content_tag(:span, "Contact", class: "this-page")
             end %></li>
             <li class="dropdown">
@@ -56,6 +56,22 @@
 
     <!-- Begin page content -->
     <main class="container main" role="main">
+        <% if flash.alert %>
+          <div class="messages">
+            <div class="alert alert-danger" role="alert">
+              <%= flash.alert %>
+            </div>
+          </div>
+        <% end %>
+
+      <% if flash.notice %>
+        <div class="messages">
+          <div class="alert alert-success" role="alert">
+            <%= flash.notice %>
+          </div>
+        </div>
+      <% end %>
+
       <%= yield %>
     </main>
 
