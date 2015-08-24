@@ -26,6 +26,14 @@ body {
   margin-top: 50px;
 }
 
+.this-page {
+  background-color: rgb(231,231,231);
+  color: rgb(85,85,85);
+  display: block;
+  font-family: 'Helvetica-Neue',Helvetica, Arial, sans-serif;
+  padding: 15px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
