@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.feature "Inquiries", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  scenario 'they see the form on the page' do
+    visit contact_path
+
+    expect(page).to have_selector('form')
+  end
 end
