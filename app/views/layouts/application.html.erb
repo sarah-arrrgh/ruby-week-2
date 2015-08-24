@@ -21,13 +21,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <%=
+              link_to_unless_current "Enspiral Dev Academy",
+               root_path, class: "navbar-brand" do |label|
+                content_tag(:span, label, class: "navbar-brand")
+            end
+          %>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to_unless_current "Home", root_path do
-              content_tag(:span, "Home", class: "this-page")
-            end %></li>
             <li><%= link_to_unless_current "About", about_path do
               content_tag(:span, "About", class: "this-page")
             end %></li>
