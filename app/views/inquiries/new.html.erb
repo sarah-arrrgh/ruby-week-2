@@ -2,16 +2,29 @@
   <header class="page-header">
     <h1>Contact us</h1>
   </header>
-  <form method="post" action="/contact">
-    <fieldset class="col-sm-6">
-      <legend>Send us a message</legend>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" class="form-control"></textarea>
-      </div>
-      <div class="form-group">
-        <input type="submit" value="Send message" class="btn btn-info btn-sm">
-      </div>
-    </fieldset>
-  </form>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= form_for :inquiry do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :subject %>
+          <%= f.text_field :subject, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :message %>
+          <%= f.text_area :message, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Send message", class: "btn btn-info btn-sm" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </article>
