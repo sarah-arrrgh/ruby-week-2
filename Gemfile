@@ -10,6 +10,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'letter_opener', group: :development
 
+gem 'mongoid', '~> 5.0.0.beta'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
