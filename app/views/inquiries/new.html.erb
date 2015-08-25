@@ -4,7 +4,7 @@
   </header>
   <div class="row">
     <div class="col-sm-6">
-      <%= form_for :inquiry do |f| %>
+      <%= form_for @inquiry, url: contact_path do |f| %>
         <div class="form-group">
           <%= f.label :name %>
           <%= f.text_field :name, class: "form-control" %>
