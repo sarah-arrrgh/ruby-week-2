@@ -22,5 +22,13 @@ RSpec.feature "Movies", type: :feature do
     expect(page).to have_content('Citizen Kane')
   end
 
+  scenario 'user can show a specific movie' do
+    movie = Movie.create(title: "Citizen Kane", director: "Orson Welles", genre: "Drama", year: 1941)
+
+    visit movie_path(movie)
+
+    expect(page).to have_content('Citizen Kane')
+  end
+
 end
 
