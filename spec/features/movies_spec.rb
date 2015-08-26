@@ -28,6 +28,22 @@ RSpec.feature "Movies", type: :feature do
     visit movie_path(movie)
 
     expect(page).to have_content('Citizen Kane')
+
+  end
+
+  scenario 'user can update a specific movie' do
+    movie = Movie.create(title: "Citizen Kane", director: "Orson Welles", genre: "Drama", year: 1941)
+
+    visit edit_movie_path(movie)
+
+    fill_in 'Title', with: "Casablanca"
+    fill_in 'Director', with: "Michael Curtiz"
+    fill_in 'Genre', with: "Drama"
+    fill_in 'Year', with: 1942
+
+    click_button 'Update Movie'
+
+    expect(page).to have_content('Casablanca')
   end
 
 end
