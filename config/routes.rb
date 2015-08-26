@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   root 'site#index'
 
+  resources :movies
+
   get '/contact' => 'inquiries#new'
   post '/contact' => 'inquiries#create'
 
   get '/about' => 'site#about'
   get '/privacy' => 'site#privacy'
   get '/terms' => 'site#terms'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
